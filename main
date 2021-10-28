@@ -9,7 +9,7 @@ int counter_win = 0; counter_lose = 0; counter_for_draw = 0, counter = 0;
 int last_winner;
 int end_game = 0;
 // last_winner = 1 - human won
-// last_winner = 0 - computer won
+// last_winner = -1 - computer won
 
 
 void check_winners(int a) // вывод результата раунда
