@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+
+int counter_win = 0; counter_lose = 0;
+
+void check_winners(int a)
+{
+    int b = rand() % 5 + 1;
+    if (a == b) printf("Draw");
+    else if ((((a - b) + 5) % 5 % 2) == 0) {printf("You won!"); ++counter_win;}
+    else {printf("You lose!"); ++counter_lose;}
+}
+
+void cleaning()
+{
+    system("@cls||clear");
+}
+
+void remain_rules()
+{
+    printf("rules\n");
+}
+
+
+int main()
+{
+    int a, s = 1;
+    printf("Hello!\nI want to play with you...\n");
+    printf("Rock-scissors-paper-lizard-Spock\n");
+    while (s)
+    {
+        printf("Just a human vs The most beautiful and clever computer\n");
+        printf("%d : %d\n", counter_win, counter_lose);
+        printf("Enter 1 - scissors, 2 - paper, 3 - rock, 4 - lizard, 5 - Spock, other number - remain rules\n");
+        scanf("%d", &a);
+        if (a < 1 || a > 5) {remain_rules(); scanf("%d", &a);}
+        check_winners(a);
+        printf("Do you want continue? 0 - NO, other number - YES\n");
+        scanf("%d", &s);
+    }
+
+}
