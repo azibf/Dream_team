@@ -12,9 +12,23 @@ int end_game = 0;
 // last_winner = -1 - computer won
 
 
+void write_opponents(int a) // вывод предмета, соотвествующего числу 
+{
+    switch((char)a)
+    {
+        case(1) :{printf("scissors"); break;}
+        case(2) :{printf("paper"); break;}
+        case(3) :{printf("rock"); break;}
+        case(4) :{printf("lizard"); break;}
+        case(5) :{printf("Spock"); break;}
+    }
+}
+
+
 void check_winners(int a) // вывод результата раунда
 {
     int b = rand() % 5 + 1;
+    write_opponents(a); printf(" vs "); write_opponents(b); printf("\n");
     if (a == b)
     {
         printf("Draw!\n");
@@ -85,3 +99,4 @@ int main()
     else printf("YOU LOSE EVERYTHING!!!");
     getch();
 }
+
