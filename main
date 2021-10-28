@@ -6,7 +6,7 @@
 
 int counter_win = 0; counter_lose = 0;
 
-void check_winners(int a)
+void check_winners(int a) // вывод результата раунда
 {
     int b = rand() % 5 + 1;
     if (a == b) printf("Draw");
@@ -14,12 +14,12 @@ void check_winners(int a)
     else {printf("You lose!"); ++counter_lose;}
 }
 
-void cleaning()
+void cleaning() // очистка экрана
 {
     system("@cls||clear");
 }
 
-void remain_rules()
+void remain_rules() // напоминаем правила
 {
     printf("rules\n");
 }
@@ -34,7 +34,7 @@ int main()
     {
         printf("Just a human vs The most beautiful and clever computer\n");
         printf("%d : %d\n", counter_win, counter_lose);
-        printf("Enter 1 - scissors, 2 - paper, 3 - rock, 4 - lizard, 5 - Spock, other number - remain rules\n");
+        printf("Enter 1 - scissors, 2 - paper, 3 - rock, 4 - lizard, 5 - Spock, other number - remind rules\n");
         scanf("%d", &a);
         if (a < 1 || a > 5) {remain_rules(); scanf("%d", &a);}
         check_winners(a);
