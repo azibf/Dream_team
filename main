@@ -5,15 +5,41 @@
 #include <time.h>
 
 
-int counter_win = 0; counter_lose = 0;
+int counter_win = 0; counter_lose = 0; counter_for_draw = 0, counter = 0;
+int last_winner;
+int end_game = 0;
+// last_winner = 1 - human won
+// last_winner = 0 - computer won
 
 
 void check_winners(int a) // вывод результата раунда
 {
     int b = rand() % 5 + 1;
-    if (a == b) printf("Draw!\n");
-    else if ((((a - b) + 5) % 5 % 2) == 0) {printf("You won!\n"); ++counter_win;}
-    else {printf("You lose!\n"); ++counter_lose;}
+    if (a == b)
+    {
+        printf("Draw!\n");
+        if (counter >= 5) last_winner = 0;
+    }
+    else if ((((a - b) + 5) % 5 % 2) == 0)
+    {
+        printf("You won!\n");
+        if (counter < 5) ++counter_win;
+        else
+        {
+            if (last_winner == 1) end_game = 1;
+            else last_winner = 1;
+        }
+    }
+    else
+    {
+        printf("You lose!\n");
+        if (counter < 5) ++counter_lose;
+        else
+        {
+            if (last_winner == -1) end_game = -1;
+            else last_winner = -1;
+        }
+    }
 }
 
 
@@ -34,18 +60,28 @@ int main()
     int a, s = 1;
     printf("Hello!\nI want to play with you...\n...\n");
     printf("Rock-scissors-paper-lizard-Spock!\n");
-    while (s)
+    while ((counter < 5 || (counter_win - counter_lose) == 0) && (end_game == 0))
     {
-        printf("Just a human vs The most beautiful and clever computer\n");
-        printf("%d : %d\n", counter_win, counter_lose);
+        printf("Round: %d\n", counter+1);
+        if (counter < 5)
+        {
+            printf("Just a human vs The most beautiful and clever computer\n");
+            printf("           %d : %d\n", counter_win, counter_lose);
+        }
+        else
+        {
+            printf("Determination of the winner in case of a draw\n");
+        }
         printf("Enter 1 - scissors, 2 - paper, 3 - rock, 4 - lizard, 5 - Spock, other number - remind rules\n");
         scanf("%d", &a);
         if (a < 1 || a > 5) {remain_rules(); scanf("%d", &a);}
         check_winners(a);
-        printf("Do you want continue? 0 - NO, other number - YES\n");
-        scanf("%d", &s);
+        ++counter;
+        printf("Tap Enter to continue");
+        getch();
         cleaning();
     }
-    printf("Bye!");
+    if (end_game == 1 || counter_win > counter_lose) printf("YOU WON EVERYTHING!!!");
+    else printf("YOU LOSE EVERYTHING!!!");
     getch();
 }
