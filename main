@@ -91,7 +91,10 @@ int main()
         }
         printf("Enter 1 - scissors, 2 - paper, 3 - rock, 4 - lizard, 5 - Spock, other number - remind rules\n");
         scanf("%d", &a);
-        if (a < 1 || a > 5) {remain_rules(); scanf("%d", &a);}
+        while((a < 1) || (a > 5)){
+            remain_rules(); 
+            scanf("%d", &a);
+        }
         check_winners(a);
         ++counter;
         printf("Tap Enter to continue");
