@@ -74,7 +74,7 @@ void remain_rules() // напоминаем правила
 
 int main()
 {
-    int a, s = 1;
+    int a;
     printf("Hello!\nI want to play with you...\n...\n");
     printf("Rock-scissors-paper-lizard-Spock!\n");
     while ((counter < 5 || (counter_win - counter_lose) == 0) && (end_game == 0))
