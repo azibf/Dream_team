@@ -13,6 +13,8 @@ int counter = 0;
 int field[10][10] = {{0}};
 int game_field[10][10] = {{0}};
 
+// проверка расположения точки
+// 1 - клетка занята, 2 - клетка соседняя с кораблёмб 3 - некорректное значение, 0 - можно ставить корабль
 int check(int a, int b)
 {
     if (a < 0 || b > 9 || a > 9 || b < 0) {return 3;}
@@ -88,7 +90,7 @@ int check(int a, int b)
     return 0;
 }
 
-
+//отрисовка поля с ходами игрока
 void draw()
 {
     printf("\n");
@@ -100,7 +102,7 @@ void draw()
     printf("\n");
 }
 
-
+//генерация поля
 void generate()
 {
     srand(time(NULL));
@@ -167,7 +169,6 @@ void generate()
         field[y][x + 2] = 4;
         field[y][x + 3] = 4;
     }
-
     printf("\n");
     for (int i = 0; i < 10; ++i)
     {
@@ -177,6 +178,7 @@ void generate()
     printf("\n");
 }
 
+//обработка действия игрока
 void step(int x, int y)
 {
     --x; --y;
@@ -189,13 +191,13 @@ void step(int x, int y)
     draw();
 }
 
-
-void cleaning() // очистка экрана
+// очистка экрана
+void cleaning()
 {
     system("@cls||clear");
 }
 
-
+//перезапуск
 void restart()
 {
     counter = 0;
@@ -204,12 +206,14 @@ void restart()
     ++global_counter;
 }
 
+
 int main()
 {
     int q = 1;
     int x, y;
     while (q != 0)
     {
+            printf("If the program doesn't print anything, restart it, please\n");
             restart();
             printf("Round: %d\n", global_counter);
             while (counter < 20)
