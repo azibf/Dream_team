@@ -17,10 +17,6 @@ int check(int a, int b)
 {
     if (a*b < 0 || b > 10 || a > 10) {return 3;}
     if (field[b][a] != 0) {return 1;}
-    if (a != 0 && a != 10 && b != 0 && b != 10)
-    {
-        if (field[b - 1][a - 1] == 1 || field[b - 1][a + 1] == 1 || field[b + 1][a - 1] == 1 || field[b + 1][a + 1] == 1 || field[b][a + 1] == 1 || field[b][a - 1] == 1 || field[b + 1][a] == 1 || field[b - 1][a] == 1) return 2;
-    }
     switch(a)
     {
         case(0):
@@ -39,7 +35,7 @@ int check(int a, int b)
                         }
                     default:
                         {
-                            if (field[b - 1][a] == 1 || field[b - 1][a + 1] == 1 || field[b + 1][a] == 1 || field[b + 1][a + 1] == 1) return 2;
+                            if (field[b - 1][a] == 1 || field[b - 1][a + 1] == 1 || field[b + 1][a] == 1 || field[b + 1][a + 1] == 1 || field[b][a + 1] == 1) return 2;
                             break;
                         }
                 }
@@ -61,12 +57,32 @@ int check(int a, int b)
                         }
                     default:
                         {
-                            if (field[b - 1][a] == 1 || field[b - 1][a - 1] == 1 || field[b + 1][a] == 1 || field[b + 1][a - 1] == 1) return 2;
+                            if (field[b - 1][a] == 1 || field[b - 1][a - 1] == 1 || field[b + 1][a] == 1 || field[b + 1][a - 1] == 1 || field[b][a - 1] == 1) return 2;
                             break;
                         }
                 }
                 break;
             }
+            default:
+                switch(b)
+                {
+                    case(0):
+                    {
+                        if (field[b][a - 1] == 1 || field[b + 1][a - 1] == 1 || field[b][a + 1] == 1 || field[b + 1][a + 1] == 1 || field[b + 1][a] == 1) return 2;
+                        break;
+                    }
+                    case(9):
+                    {
+                        if (field[b][a - 1] == 1 || field[b - 1][a - 1] == 1 || field[b][a + 1] == 1 || field[b - 1][a + 1] == 1 || field[b - 1][a] == 1) return 2;
+                        break;
+                    }
+                    default:
+                    {
+                        if (field[b - 1][a - 1] == 1 || field[b - 1][a + 1] == 1 || field[b + 1][a - 1] == 1 || field[b + 1][a + 1] == 1 || field[b][a + 1] == 1 || field[b][a - 1] == 1 || field[b + 1][a] == 1 || field[b - 1][a] == 1) return 2;
+                        break;
+                    }
+                }
+
     }
 
     return 0;
@@ -211,3 +227,4 @@ int main()
             scanf("%d", &q);
     }
 }
+
