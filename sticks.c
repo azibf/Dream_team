@@ -64,7 +64,6 @@ void draw_sticks()
 
 int one_player_mode()
 {
-    int result = 0;
     int step;
     step = human_step();
     sticks_counter -= step;
@@ -81,7 +80,6 @@ int one_player_mode()
 
 int two_players_mode()
 {
-    int result = 0;
     int step;
     printf("Player 1\n");
     step = human_step();
@@ -138,7 +136,6 @@ void start()
 
 int main()
 {
-    int result;
     printf("Hello!\nI want to play with you...\n...\n");
     printf("Sticks!\n");
     printf("(I know, that it is modified nim)\n");
