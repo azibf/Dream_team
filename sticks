@@ -6,9 +6,11 @@
 
 
 int hard_level = 0;
+char chhard_level = 0;
 int big_counter = 0;
 int end_game = 0;
 int time_seed;
+char chplayers_num = '0';
 int players_num = 0;
 int sticks_counter;
 
@@ -22,15 +24,16 @@ void cleaning() // очистка экрана
 
 int human_step() // обработка хода человека
 {
-    int a;
-    printf("Enter number from 1 to 3\n");
-    scanf("%d", &a);
-    while ((a < 1) || (a > 3))
+    char a;
+    printf("Enter number from 1 to 3:");
+    scanf(" %c", &a);
+    while ((a != '1') && (a != '2') && (a != '3'))
     {
-        printf("Incorrect number of sticks!\nEnter number from 1 to 3\n");
-        scanf("%d", &a);
+        printf("Incorrect number of sticks! Enter number from 1 to 3:");
+        scanf(" %c", &a);
+        printf("%c", a);
     }
-    return a;
+    return a - '0';
 }
 
 int computer_step() // обработка хода компьютера
@@ -108,21 +111,24 @@ void start()
         printf("Quantity of sticks: %d\n", sticks_counter);
     }
     printf("Enter quantity of players\n1 player - 1, 2 players - 2\n");
-    scanf("%d", &players_num);
-    while((players_num < 1) || (players_num > 2))
+    scanf(" %c", &chplayers_num);
+    while((chplayers_num != '1') && (chplayers_num != '2'))
     {
-        printf("Wrong quantity of players\n 1 player - 1, 2 players - 2\n");
-        scanf("%d", &players_num);
+        printf("Wrong quantity of players\n1 player - 1, 2 players - 2\n");
+        scanf(" %c", &chplayers_num);
     }
+    players_num = chplayers_num - '0';
     if (players_num == 1)
     {
         printf("Enter 1 to play simple game and 2 to hard\n");
-        scanf("%d", &hard_level);
-        while((hard_level < 1) || (hard_level > 2))
+        scanf(" %c", &chhard_level);
+        while((chhard_level != '1') && (chhard_level != '2'))
         {
             printf("Wrong hard level!\n simple - 1, hard - 2\n");
-            scanf("%d", &hard_level);
+            scanf(" %c", &chhard_level);
         }
+        hard_level = chhard_level - '0';
+        
     }
     cleaning();
     printf("BIG GAME: %d\n", big_counter);
@@ -160,6 +166,5 @@ int main()
             }
         }
         printf("Enter 0 to stop and other number continue\n");
-        scanf("%d", &q);
     }
 }
