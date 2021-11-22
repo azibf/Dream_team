@@ -166,5 +166,6 @@ int main()
             }
         }
         printf("Enter 0 to stop and other number continue\n");
+        scanf("%d", &q);
     }
 }
