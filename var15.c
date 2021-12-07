@@ -114,13 +114,15 @@ int main15(){
 
     uneven_indexes = (int *) malloc(uneven_count*sizeof(int));
 
-    for(int i = 0; i<positive_count;i++){
-        if(positive_reverse[i]%2==1){
-            uneven_indexes[m2_index]=i;
-            m2_index++;
-            if(m2_index==uneven_count){
-                break;
+    m1_index = 0;
+    for(int i = N-1; i>-1; i--){
+        if(lst[i]>0){
+            positive_reverse[m1_index] = lst[i];
+            if(lst[i]%2==1){
+                uneven_indexes[m2_index] = i;
+                m2_index++;
             }
+            m1_index++;
         }
     }
 
