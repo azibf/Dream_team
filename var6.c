@@ -5,13 +5,13 @@
 #include <time.h>
 
 
-void out(int N, int *pmas) //вывод массива
+void out(int N, int *pmas) //РІС‹РІРѕРґ РјР°СЃСЃРёРІР°
 {
     for (int i = 0; i < N; ++i) printf("%d ", *(pmas + i));
     printf("\n");
 }
 
-void fill(int N, int a, int b, int *pmas) //заполнение массива с учёто особенностей задания
+void fill(int N, int a, int b, int *pmas, int c) //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃ СѓС‡С‘С‚Рѕ РѕСЃРѕР±РµРЅРЅРѕСЃС‚РµР№ Р·Р°РґР°РЅРёСЏ
 {
     int counter = 0;
     for (int i = 0; i < N; ++i)
@@ -19,10 +19,11 @@ void fill(int N, int a, int b, int *pmas) //заполнение массива с учёто особеннос
         *(pmas + i) = rand() % (b - a + 1) + a;
         if (*(pmas + i) == 0) ++counter;
     }
-    if (counter < 2) fill(N, a, b, pmas);
+    if (counter < 2) fill(N, a, b, pmas, c + 1);
+    else printf("amount of generation: %d \n", c);
 }
 
-void swap(int *p1, int *p2) //смена элементов местами
+void swap(int *p1, int *p2) //СЃРјРµРЅР° СЌР»РµРјРµРЅС‚РѕРІ РјРµСЃС‚Р°РјРё
 {
     int q = *p1;
     *p1 = *p2;
@@ -49,7 +50,7 @@ int main6()
     int mas[N];
 
     // task 1
-    fill(N, a, b, &mas[0]);
+    fill(N, a, b, &mas[0], 0);
     out(N, &mas[0]);
 
     // task 2
@@ -76,9 +77,13 @@ int main6()
         if (mas[i] > max_elem) max_elem = mas[i];
         if (mas[i] < min_elem) min_elem = mas[i];
         if (mas[i] % 2 == 1) ++counter;
+        printf("%d ", mas[i]);
     }
-    printf("%d %.1f %d \n", sum, ((float)min_elem + (float)max_elem) /2, counter);
-
+    printf("\n");
+    printf("sum: %d \n", sum);
+    printf("min elem: %d, max elem: %d\n", min_elem, max_elem);
+    printf("arithmetic mean of max and min: %.1f \n", ((float)min_elem + (float)max_elem) /2);
+    printf("number of odd numbers: %d \n", counter);
     //task 4
     printf("\n");
     int counter_minus = 0, counter_plus = 0;
@@ -101,9 +106,11 @@ int main6()
             a1[N - counter_plus] = mas[i];
         }
     }
+    printf("source array : ");
     out(N, &mas[0]);
+    printf("array of negative: ");
     out(N, &a1[0]);
-    if (counter != 0) out(counter, &a2[0]);
+    if (counter != 0) {printf("array of positive's index: "); out(counter, &a2[0]);}
     else printf("Empty");
     free(a1); free(a2);
 }
