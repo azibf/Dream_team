@@ -1,0 +1,139 @@
+# depslib dependency file v1.0
+1638820957 source:c:\users\arina\onedrive\Рабочий стол\lab_mas\main.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	"var6.h"
+	"var14.h"
+	"var15.h"
+	"var17.h"
+
+1638818745 source:c:\users\arina\onedrive\Рабочий стол\lab_mas\var6.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
+1638805400 c:\users\arina\onedrive\Рабочий стол\lab_mas\var6.h
+
+1638819517 source:c:\users\arina\onedrive\Рабочий стол\lab_mas\var14.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<malloc.h>
+
+1638821021 source:c:\users\arina\onedrive\Рабочий стол\lab_mas\var15.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1638807145 source:c:\users\arina\onedrive\Рабочий стол\lab_mas\var17.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<malloc.h>
+
+1638819345 c:\users\arina\onedrive\Рабочий стол\lab_mas\var14.h
+
+1638819555 c:\users\arina\onedrive\Рабочий стол\lab_mas\var15.h
+
+1638807353 c:\users\arina\onedrive\Рабочий стол\lab_mas\var17.h
+
+1638820957 source:c:\users\arina\onedrive\Рабочий стол\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\main.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	"var6.h"
+	"var14.h"
+	"var15.h"
+	"var17.h"
+
+1638805400 c:\users\arina\onedrive\Рабочий стол\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var6.h
+
+1638819345 c:\users\arina\onedrive\Рабочий стол\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var14.h
+
+1638819555 c:\users\arina\onedrive\Рабочий стол\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var15.h
+
+1638807353 c:\users\arina\onedrive\Рабочий стол\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var17.h
+
+1638819517 source:c:\users\arina\onedrive\Рабочий стол\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var14.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<malloc.h>
+
+1638807145 source:c:\users\arina\onedrive\Рабочий стол\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var17.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<malloc.h>
+
+1638818745 source:c:\users\arina\onedrive\Рабочий стол\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var6.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
+1638821446 source:c:\users\arina\onedrive\Рабочий стол\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var15.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1638870807 source:c:\users\arina\onedrive\Рабочий стол\Текущее\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\main.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	"var6.h"
+	"var14.h"
+	"var15.h"
+	"var17.h"
+
+1638805400 c:\users\arina\onedrive\Рабочий стол\Текущее\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var6.h
+
+1638819345 c:\users\arina\onedrive\Рабочий стол\Текущее\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var14.h
+
+1638819555 c:\users\arina\onedrive\Рабочий стол\Текущее\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var15.h
+
+1638807353 c:\users\arina\onedrive\Рабочий стол\Текущее\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var17.h
+
+1638819517 source:c:\users\arina\onedrive\Рабочий стол\Текущее\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var14.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<malloc.h>
+
+1638821446 source:c:\users\arina\onedrive\Рабочий стол\Текущее\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var15.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1638807145 source:c:\users\arina\onedrive\Рабочий стол\Текущее\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var17.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<malloc.h>
+
+1638878584 source:c:\users\arina\onedrive\Рабочий стол\Текущее\ЛР5+ДЗ\ЛР5.Захарова.Петроченков.Плестов.Суворов\lab_mas\var6.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
