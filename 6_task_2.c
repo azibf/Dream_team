@@ -116,11 +116,12 @@ char **string_split(const char *str, const char *separator)
             ++c;
             if (c == len_sep)
             {
-                n[w_c][current - c] = '\0';
+                n[w_c][current - c + 1] = '\0';
                 current = 0;
                 c = 0;
                 printf("%s ", n[w_c]);
                 ++w_c;
+                continue;
             }
         }
         else c = 0;
@@ -128,6 +129,8 @@ char **string_split(const char *str, const char *separator)
         ++current;
 
     }
+    n[w_c][current] = '\0';
+    printf("%s", n[w_c]);
     return n;
 }
 
@@ -184,6 +187,6 @@ int main()
 
     char **mas;
     mas = string_split(s1, "NE");
-    printf("%s \n", mas[0][0]);
+    //printf("%s \n", mas[0][0]);
 
 }
