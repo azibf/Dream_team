@@ -40,8 +40,7 @@ int main()
     int* **p = NULL;
     p = (int **) malloc(5 * sizeof(int *));
     for (int i = 0; i < 5; i++) p[i] = (int *) malloc(N * sizeof(int));
-    for (int i = 0; i < N; ++i) printf("%f ", *mas[i]);
-
+    out(N, &mas[0]);
     printf("\n");
     double start_t, end_t;
     printf("\n|----------------------------|\n");
@@ -59,8 +58,7 @@ int main()
             case 3:{Quick_sort(p[i], 0, N - 1);break;            }
             case 4:{Merge_sort(N, &p[i][0]);break;}
         }
-        for (int j = 0; j < N; ++j) printf("%d ", p[i][j]);
-        printf("\n");
+        //out(N, &p[i][0]);
         end_t = clock();
         sort_res[i] = check_sort(N, &p[i][0]);
 
