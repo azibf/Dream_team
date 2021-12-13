@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="sorts" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/sorts" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/sorts" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="base.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base.h" />
+		<Unit filename="bubble.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bubble.h" />
+		<Unit filename="insertion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="insertion.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="merge.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="merge.h" />
+		<Unit filename="quick.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="quick.h" />
+		<Unit filename="shell.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="shell.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

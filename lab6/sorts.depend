@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1639416699 source:c:\users\arina\onedrive\Рабочий стол\sorts\bubble.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
+1639034870 source:c:\users\arina\onedrive\Рабочий стол\sorts\insertion.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
+1639416915 source:c:\users\arina\onedrive\Рабочий стол\sorts\main.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
+1639157600 source:c:\users\arina\onedrive\Рабочий стол\sorts\quick.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
+1639414999 source:c:\users\arina\onedrive\Рабочий стол\sorts\shell.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
+1639034848 source:c:\users\arina\onedrive\Рабочий стол\sorts\merge.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
+1639413038 source:c:\users\arina\onedrive\Рабочий стол\sorts\base.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+
