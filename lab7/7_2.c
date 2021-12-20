@@ -61,4 +61,6 @@ int main(){
     }
 
     show(user_input, len);
+    free(user_input);
+    return 0;
 }
